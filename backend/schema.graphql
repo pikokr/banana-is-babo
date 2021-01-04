@@ -1,0 +1,11 @@
+type User {
+    id: String!
+}
+
+type Me {
+    user: User!
+}
+
+type Query {
+    me: Me
+}
