@@ -1,41 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-interface AppProps {}
-
-function App({}: AppProps) {
-  // Create the count state.
-  const [count, setCount] = useState(0);
-  // Create the counter (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
-  // Return the App component.
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div>
+            <div className="flex justify-between items-center border-b-2 border-gray-100 p-4 md:px-10 lg:px-60">
+                <div className="flex justify-start">
+                    <a href="/">
+                        <span className="text-3xl">BANANA</span>
+                    </a>
+                </div>
+                <div className="flex justify-end">
+                    <a href="#" className="text-center justify-center px-4 py-2 border-transparent rounded-md bg-indigo-600 text-white">
+                        로그인
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default App;
