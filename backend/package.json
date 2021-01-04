@@ -11,5 +11,8 @@
   },
   "scripts": {
     "dev": "concurrently \"tsc --watch\" \"nodemon dist\""
+  },
+  "dependencies": {
+    "apollo-server": "^2.19.1"
   }
 }
