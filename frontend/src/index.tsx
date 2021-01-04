@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './fontAwesome'
 import App from './App';
 import './index.css';
 import {ApolloProvider} from "@apollo/client";
