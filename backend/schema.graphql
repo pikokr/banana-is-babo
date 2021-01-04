@@ -9,3 +9,7 @@ type Me {
 type Query {
     me: Me
 }
+
+type Mutation {
+    login(code: String!): String
+}
