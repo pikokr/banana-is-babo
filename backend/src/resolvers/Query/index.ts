@@ -1,3 +1,5 @@
 import {IResolvers} from "graphql-tools";
 
-export default {} as IResolvers
+export default {
+    me: (source, args, context) => context.user || null
+} as IResolvers
