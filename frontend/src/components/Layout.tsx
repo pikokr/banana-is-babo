@@ -46,7 +46,7 @@ const Layout = ({children}: {children: React.ReactNode}) => {
                                         })}/>
                                     </a>
                                     <div className={
-                                        clsx('absolute rounded-md shadow-lg ring-1 w-full mt-2 ring-opacity-5 ring-2 ring-black bg-white transition-all flex', {
+                                        clsx('absolute rounded-md shadow-lg ring-1 w-full mt-2 ring-opacity-5 ring-2 ring-black bg-white transition-all flex flex-col', {
                                             'opacity-0': !userDropdown,
                                             'opacity-100': userDropdown,
                                             'mt-5': !userDropdown,
@@ -54,7 +54,12 @@ const Layout = ({children}: {children: React.ReactNode}) => {
                                             'pointer-events-none': !userDropdown
                                         })
                                     } onClick={() => setUserDropdownOpen(false)}>
-                                        <a href="#" className="w-full p-2" onClick={e => {
+                                        {
+                                            user.id === '628595345798201355' && <a href="/admin" className="w-full p-2 hover:bg-gray-50 transition-colors">
+                                                관리
+                                            </a>
+                                        }
+                                        <a href="#" className="w-full p-2 hover:bg-gray-50 transition-colors" onClick={e => {
                                             e.preventDefault()
                                             localStorage.removeItem('token')
                                             window.location.reload()
