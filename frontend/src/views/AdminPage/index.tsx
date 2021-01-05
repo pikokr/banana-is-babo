@@ -2,7 +2,7 @@ import React from 'react';
 
 const AdminPage = () => {
     return (
-        <div>
+        <div className="pt-2 px-4 md:px-10 lg:px-60">
             ADMIN
         </div>
     );
