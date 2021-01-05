@@ -4,6 +4,8 @@ import {gql} from "@apollo/client/core";
 import ClickAwayHandler from "./ClickAwayHandler";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from "clsx";
+import { Link } from 'react-router-dom';
+import {ADMIN_ID} from "../CONSTANTS";
 
 const Layout = ({children}: {children: React.ReactNode}) => {
     const [userDropdown, setUserDropdownOpen] = React.useState(false)
@@ -55,9 +57,9 @@ const Layout = ({children}: {children: React.ReactNode}) => {
                                         })
                                     } onClick={() => setUserDropdownOpen(false)}>
                                         {
-                                            user.id === '628595345798201355' && <a href="/admin" className="w-full p-2 hover:bg-gray-50 transition-colors">
+                                            user.id === ADMIN_ID && <Link to="/admin" className="w-full p-2 hover:bg-gray-50 transition-colors">
                                                 관리
-                                            </a>
+                                            </Link>
                                         }
                                         <a href="#" className="w-full p-2 hover:bg-gray-50 transition-colors" onClick={e => {
                                             e.preventDefault()
